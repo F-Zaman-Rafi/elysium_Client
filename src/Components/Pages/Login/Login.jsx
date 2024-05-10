@@ -47,9 +47,9 @@ const Login = () => {
         }
     }
 
-    if (user || loading) return
+
     return (
-        <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12'>
+        <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12 relative'>
             <p className='mt-3 text-5xl font-press  text-center text-[#FFFF00] py-10 '>
                 Welcome back!
             </p>
@@ -102,7 +102,7 @@ const Login = () => {
                             id='LoggingEmailAddress'
                             autoComplete='email'
                             name='email'
-                            className='block w-full px-4 py-2 text-gray-700 bg-transparent border rounded-lg  border-[#FFD700]  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
+                            className='block w-full px-4 py-2 text-white bg-transparent border rounded-lg  border-[#FFD700]  focus:border-blue-400 focus:ring-opacity-40  focus:outline-none focus:ring focus:ring-blue-300'
                             type='email'
                         />
                     </div>
@@ -121,7 +121,7 @@ const Login = () => {
                             id='loggingPassword'
                             autoComplete='current-password'
                             name='password'
-                            className='block w-full px-4 py-2 text-gray-700 bg-transparent  border rounded-lg   focus:border-blue-400 focus:ring-opacity-40 border-[#FFD700]  focus:outline-none focus:ring focus:ring-blue-300'
+                            className='block w-full px-4 py-2 text-white bg-transparent  border rounded-lg   focus:border-blue-400 focus:ring-opacity-40 border-[#FFD700]  focus:outline-none focus:ring focus:ring-blue-300'
                             type='password'
                         />
                     </div>
@@ -140,8 +140,7 @@ const Login = () => {
 
                     <Link
                         to='/register'
-                        className='text-xs text-white uppercase  hover:underline'
-                    >
+                        className='text-xs text-white uppercase  hover:underline'>
                         or sign up
                     </Link>
 

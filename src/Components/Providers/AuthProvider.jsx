@@ -10,6 +10,7 @@ import {
     signOut,
     updateProfile,
 } from "firebase/auth";
+import { Toaster } from "react-hot-toast";
 
 
 export const AuthContext = createContext(null);
@@ -85,6 +86,7 @@ const AuthProvider = ({ children }) => {
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
+            <Toaster position="top-center"></Toaster>
         </AuthContext.Provider>
     );
 };

@@ -32,7 +32,7 @@ const NavBar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm font-play dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
-                        <li><p>Home</p></li>
+                        <Link to='/'><li><p>Home</p></li></Link>
                         <li><p>Services</p></li>
                         <li>
                             <p>Dashboard</p>
@@ -55,7 +55,7 @@ const NavBar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-play text-2xl font-bold">
-                    <li><p>Home</p></li>
+                    <Link to='/'><li><p>Home</p></li></Link>
                     <li><p>Services</p></li>
                     <li>
                         <details>
@@ -91,7 +91,7 @@ const NavBar = () => {
                     <MdOutlineLightMode className="swap-on fill-current h-7 w-7 md:h-10 md:w-10  text-red-600  "></MdOutlineLightMode>
 
 
-                    <MdOutlineDarkMode className="swap-off fill-current h-7 w-7 md:h-10 md:w-10  text-red-600 "></MdOutlineDarkMode >
+                    <MdOutlineDarkMode className="swap-off fill-current h-7 w-7 md:h-10 md:w-10  text-[#FFD700] "></MdOutlineDarkMode >
                 </label>
             </div>
 
