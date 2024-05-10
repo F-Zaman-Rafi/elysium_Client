@@ -3,11 +3,13 @@ import NavBar from "../NavBar/NavBar";
 import Background from "../BackGround/Background";
 const Root = () => {
     return (
-        <div className="bg-hero-pattern bg-no-repeat min-h-screen text-white ">
+        <div className=" text-white ">
             <div className="absolute top-0 left-0 w-full h-full"><Background></Background></div>
-            <NavBar className="relative"></NavBar>
-            <div className="container mx-auto relative">
-                < Outlet ></Outlet >
+            <div className="relative">
+                <NavBar ></NavBar>
+                <div className="container mx-auto">
+                    < Outlet ></Outlet >
+                </div>
             </div>
         </div >
     );
