@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import useAuth from "../../Providers/useAuth";
 const RegisterPage = () => {
     const navigate = useNavigate();
-    const { signInWithGoogle, createUser, updateUserProfile, user, setUser, loading } = useAuth();
+    const { signInWithGoogle, createUser, updateUserProfile, user, setUser } = useAuth();
     const location = useLocation();
     const from = location.state || '/';
 

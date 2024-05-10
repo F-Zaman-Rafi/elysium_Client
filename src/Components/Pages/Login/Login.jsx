@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import useAuth from "../../Providers/useAuth";
 const Login = () => {
     const navigate = useNavigate();
-    const { signIn, signInWithGoogle, user, loading } = useAuth();
+    const { signIn, signInWithGoogle, user } = useAuth();
     const location = useLocation();
     const from = location.state || '/'
 
