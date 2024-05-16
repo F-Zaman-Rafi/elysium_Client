@@ -5,7 +5,7 @@ import { Link, useLoaderData } from "react-router-dom";
 const ServiceDetails = () => {
     const service = useLoaderData();
     const { _id, serviceName, serviceImage, description, providerImage, providerName, serviceArea, servicePrice } = service;
-
+    console.log(service)
 
     return (
         <div>

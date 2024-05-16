@@ -15,7 +15,7 @@ const ServiceHome = () => {
         }
         getData()
     }, [])
-
+    console.log(services)
 
     return (
         <div className="mt-40">
