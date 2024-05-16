@@ -50,11 +50,11 @@ const Login = () => {
 
     return (
         <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12 relative'>
-            <p className='mt-3 text-5xl font-press  text-center text-[#FFFF00] py-10 '>
+            <p className='mt-3 text-5xl font-press  text-center text-[#FFD700] py-10 '>
                 Welcome back!
             </p>
             <div className='w-full max-w-sm mx-auto bg-none overflow-hidden rounded-lg shadow-lg lg:max-w-xl '>
-                <div onClick={handleGoogleLogin} className='flex cursor-pointer items-center justify-center mt-4 text-[#FFFF00] border-[#FFD700] transition-colors duration-300 transform border rounded-lg hover:bg-transparent '>
+                <div onClick={handleGoogleLogin} className='flex cursor-pointer items-center justify-center mt-4 text-[#FFD700] border-[#FFD700] transition-colors duration-300 transform border rounded-lg hover:bg-transparent '>
                     <div className='px-4 py-2'>
                         <svg className='w-6 h-6' viewBox='0 0 40 40'>
                             <path

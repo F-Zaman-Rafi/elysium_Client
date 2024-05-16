@@ -54,13 +54,13 @@ const NavBar = () => {
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 font-play text-2xl font-bold">
+                <ul className="menu menu-horizontal px-1 font-play text-2xl font-bold ">
                     <Link to='/'><li><p>Home</p></li></Link>
                     <li><p>Services</p></li>
                     <li>
                         <details>
                             <summary>Dashboard</summary>
-                            <ul className="p-2">
+                            <ul className="p-2 absolute top-full z-50 bg-opacity-80">
                                 <li><p>Add Service</p></li>
                                 <li><p>Manage Services</p></li>
                                 <li><p>Booked Services</p></li>

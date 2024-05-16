@@ -1,17 +1,11 @@
 /* eslint-disable react/prop-types */
 
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
-const ServiceCard = ({ service }) => {
+const ServiceDetails = () => {
+    const service = useLoaderData();
     const { _id, serviceName, serviceImage, description, providerImage, providerName, serviceArea, servicePrice } = service;
 
-    // Service Image
-    // ● Service Name
-    // ● Service Description ( max 100 character)
-    // ● View Detail Button
-    // ● Service Provider Image , Name
-    // ● Service Area
-    // ● Service Price
 
     return (
         <div>
@@ -40,7 +34,7 @@ const ServiceCard = ({ service }) => {
                         <div className="flex items-center justify-between">
                             <div className="flex items-center">
                                 <img
-                                    className="object-cover h-10 rounded-full"
+                                    className="object-cover h-10"
                                     src={providerImage}
                                     alt="Avatar"
                                 />
@@ -49,19 +43,19 @@ const ServiceCard = ({ service }) => {
                                     tabIndex="0"
                                     role="link"
                                 >
-                                    {providerName}
+                                    Service Provider : {providerName}
                                 </p>
                             </div>
-                            <span className=" mx-1 text-xs text-gray-600 dark:text-gray-300">{serviceArea}</span>
+                            <span className=" mx-1 text-xs text-gray-600 dark:text-gray-300">Service Area: {serviceArea}</span>
                         </div>
                     </div>
                     <div className="flex items-center justify-center">
-                        <Link to={`/service/${_id}`}><p className="mt-10 bg-transparent border-[#FFD700] btn w-full hover:bg-transparent hover:border-red-600 hover:text-[#08FF08]">View Details</p></Link>
+                        <Link to={`/book-service/${_id}`} service={service}><p className="mt-10 bg-transparent border-[#FFD700] btn w-full hover:bg-transparent hover:border-red-600 hover:text-[#08FF08]">Book Now</p></Link>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
-export default ServiceCard;
+export default ServiceDetails;

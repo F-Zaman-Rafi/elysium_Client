@@ -11,6 +11,9 @@ import Login from './Components/Pages/Login/Login';
 import AuthProvider from './Components/Providers/AuthProvider';
 import RegisterPage from './Components/Pages/RegisterPage/RegisterPage'
 import ErrorPage from './Components/Pages/ErrorPage/ErrorPage';
+import ServiceDetails from './Components/Pages/ServiceDetails/ServiceDetails';
+import Booking from './Components/Pages/Booking/Booking';
+import AllService from './Components/Pages/AllService/AllService';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +24,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch(`${import.meta.env.VITE_API_URL}/services`)
+        // loader: () => fetch(`${import.meta.env.VITE_API_URL}/services`)
       },
       {
         path: '/login',
@@ -30,6 +33,21 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <RegisterPage></RegisterPage>
+      },
+      {
+        path: '/service/:id',
+        element: <ServiceDetails></ServiceDetails>,
+        loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/service/${params.id}`)
+      },
+      {
+        path: '/all-services',
+        element: <AllService></AllService>
+      },
+      {
+        path: '/book-service/:id',
+        element: <Booking></Booking>,
+        loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/service/${params.id}`)
+
       }
     ]
   },
