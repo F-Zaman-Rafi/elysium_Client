@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
     const { _id, serviceName, serviceImage, description, providerImage, providerName, serviceArea, servicePrice } = service;
-    console.log(service)
     // Service Image
     // ● Service Name
     // ● Service Description ( max 100 character)
