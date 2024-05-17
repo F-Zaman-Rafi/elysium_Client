@@ -99,11 +99,11 @@ const NavBar = () => {
                 {
                     user ?
                         <div className="flex gap-2 md:gap-4 items-center">
-                            <Link to="/profile">
-                                <div className="tooltip tooltip-bottom " data-tip={user.displayName}>
-                                    <p className="font-semibold text-lg"><img className="h-8 lg:h-10 rounded-full border-t-red-400 border-l-yellow-400 border-b-green-400 border-r-blue-400 border-2" src={user.photoURL} alt="userPhoto" /></p>
-                                </div>
-                            </Link>
+
+                            <div className="tooltip tooltip-bottom " data-tip={user.displayName}>
+                                <p className="font-semibold text-lg"><img className="h-8 lg:h-10 rounded-full border-t-red-400 border-l-yellow-400 border-b-green-400 border-r-blue-400 border-2" src={user.photoURL} alt="userPhoto" /></p>
+                            </div>
+
                             <p onClick={handleLogOut} className="btn btn-sm md:btn-lg btn-ghost btn-outline border-red-600 border-4 font-play md:text-2xl text-white hover:text-[#FFD700] hover:bg-transparent hover:border-[#FFD700] ">Sign Out</p>
                         </div>
                         :
