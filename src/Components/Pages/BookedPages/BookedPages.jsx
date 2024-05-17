@@ -1,6 +1,7 @@
 import axios from "axios";
 import useAuth from "../../Providers/useAuth";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 const BookedPages = () => {
     const { user } = useAuth()
@@ -16,6 +17,9 @@ const BookedPages = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Booked Services || Elysium</title>
+            </Helmet>
             <section className='container px-4 mx-auto pt-12'>
                 <div className='flex items-center gap-x-3'>
                     <h2 className='text-lg font-medium text-gray-300 '>My services</h2>

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 const ServiceDetails = () => {
@@ -9,6 +10,9 @@ const ServiceDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Service Details || Elysium</title>
+            </Helmet>
             <div className="max-w-2xl overflow-hidden bg-transparent rounded-lg shadow-md font-play dark:bg-transparent border-[#FFD700] border-2 mx-5 md:mx-auto">
                 <img
                     className="object-cover w-full h-64"

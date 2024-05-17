@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom"
 import { useEffect } from "react";
 import toast from "react-hot-toast";
 import useAuth from "../../Providers/useAuth";
+import { Helmet } from "react-helmet";
 const Login = () => {
     const navigate = useNavigate();
     const { signIn, signInWithGoogle, user } = useAuth();
@@ -50,6 +51,9 @@ const Login = () => {
 
     return (
         <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12 relative'>
+            <Helmet>
+                <title>Login || Elysium</title>
+            </Helmet>
             <p className='mt-3 text-5xl font-press  text-center text-[#FFD700] py-10 '>
                 Welcome back!
             </p>

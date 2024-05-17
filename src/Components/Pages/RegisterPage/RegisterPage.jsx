@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import toast from "react-hot-toast";
 import useAuth from "../../Providers/useAuth";
+import { Helmet } from "react-helmet";
 const RegisterPage = () => {
     const navigate = useNavigate();
     const { signInWithGoogle, createUser, updateUserProfile, user, setUser } = useAuth();
@@ -58,6 +59,9 @@ const RegisterPage = () => {
 
     return (
         <div className='flex flex-row-reverse justify-center items-center min-h-[calc(100vh-306px)] my-12 relative'>
+            <Helmet>
+                <title>Register || Elysium</title>
+            </Helmet>
             <p className='mt-3 text-5xl font-press  text-center text-[#FFFF00] py-10 '>
                 Welcome!
             </p>

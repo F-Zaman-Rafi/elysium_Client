@@ -1,6 +1,6 @@
 import axios from "axios";
 import useAuth from "../../Providers/useAuth";
-
+import { Helmet } from "react-helmet";
 const AddService = () => {
     const { user } = useAuth()
     const { displayName, email, photoURL } = user
@@ -30,9 +30,12 @@ const AddService = () => {
         }
     }
 
-    <title>Add Service</title>
+
     return (
         <div>
+            <Helmet>
+                <title>Add Service || Elysium</title>
+            </Helmet>
             <p className="font-press text-center text-5xl my-10">Add Service</p>
             <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-transparent">
                 <form onSubmit={handleAddJobs}>

@@ -6,6 +6,7 @@ import { useLoaderData } from "react-router-dom";
 import useAuth from "../../Providers/useAuth";
 import { useState } from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 const Booking = () => {
 
@@ -48,6 +49,9 @@ const Booking = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Booking Service || Elysium</title>
+            </Helmet>
             <p className="font-press text-center text-5xl my-10">Book Now</p>
             <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-transparent">
                 <form onSubmit={handleFormSubmission}>

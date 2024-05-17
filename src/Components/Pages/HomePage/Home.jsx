@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import ServiceHome from "../Services/ServiceHome";
 import Carousel from "./Carousel";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
 
     return (
         <div className="text-whitel">
+            <Helmet>
+                <title>Home || Elysium</title>
+            </Helmet>
             <Carousel></Carousel>
             <p className="md:text-6xl text-xl text-center font-press my-20 md:my-40">Popular Services</p>
             <ServiceHome></ServiceHome>

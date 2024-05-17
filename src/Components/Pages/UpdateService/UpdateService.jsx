@@ -6,6 +6,7 @@ import useAuth from "../../Providers/useAuth";
 import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const UpdateService = () => {
     const { user } = useAuth()
@@ -49,6 +50,9 @@ const UpdateService = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Update Service || Elysium</title>
+            </Helmet>
             <p className="font-press text-center text-5xl my-10">Update</p>
             <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-transparent">
                 <form onSubmit={handleUpdate} >

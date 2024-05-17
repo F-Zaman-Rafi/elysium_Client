@@ -3,6 +3,7 @@ import useAuth from "../../Providers/useAuth";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const ManageServices = () => {
     const { user } = useAuth()
@@ -34,6 +35,9 @@ const ManageServices = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Manage Service || Elysium</title>
+            </Helmet>
             <section className='container px-4 mx-auto pt-12'>
                 <div className='flex items-center gap-x-3'>
                     <h2 className='text-lg font-medium text-violet-600 '>My Posted Services</h2>

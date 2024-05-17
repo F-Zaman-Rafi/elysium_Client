@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import Background from "../../BackGround/Background";
+import { Helmet } from "react-helmet";
 
 const ErrorPage = () => {
     return (
         <div>
+            <Helmet>
+                <title>Oops! || Elysium</title>
+            </Helmet>
             <Background classname="absolute"></Background>
             <div className="relative">
                 <p className=" text-3xl max-w-2xl mx-auto font-press text-center leading-loose pt-20 text-violet-500">Oops! <br /> You have landed a wrong place!</p>
