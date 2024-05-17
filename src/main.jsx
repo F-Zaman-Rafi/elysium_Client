@@ -14,6 +14,8 @@ import ErrorPage from './Components/Pages/ErrorPage/ErrorPage';
 import ServiceDetails from './Components/Pages/ServiceDetails/ServiceDetails';
 import Booking from './Components/Pages/Booking/Booking';
 import AllService from './Components/Pages/AllService/AllService';
+import PrivateRoute from './Components/Routes/PrivateRoute';
+import AddService from './Components/Pages/AddService/AddService';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/service/:id',
-        element: <ServiceDetails></ServiceDetails>,
+        element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
         loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/service/${params.id}`)
       },
       {
@@ -45,9 +47,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/book-service/:id',
-        element: <Booking></Booking>,
+        element: <PrivateRoute><Booking></Booking></PrivateRoute>,
         loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/service/${params.id}`)
-
+      },
+      {
+        path: '/add-service',
+        element: <PrivateRoute><AddService></AddService></PrivateRoute>
       }
     ]
   },

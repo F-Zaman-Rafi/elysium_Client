@@ -33,16 +33,19 @@ const NavBar = () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm font-play dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
                         <Link to='/'><li><p>Home</p></li></Link>
-                        <li><p>Services</p></li>
-                        <li>
-                            <p>Dashboard</p>
-                            <ul className="p-2">
-                                <li><p>Add Service</p></li>
-                                <li><p>Manage Service</p></li>
-                                <li><p>Booked Services</p></li>
-                                <li><p>Service-To-Do</p></li>
-                            </ul>
-                        </li>
+                        <Link to='/all-services'><li><p>Services</p></li></Link>
+                        {
+                            user ? (<li>
+                                <p>Dashboard</p>
+                                <ul className="p-2">
+                                    <Link to='/add-service'><li><p>Add Service</p></li></Link>
+                                    <li><p>Manage Service</p></li>
+                                    <li><p>Booked Services</p></li>
+                                    <li><p>Service-To-Do</p></li>
+                                </ul>
+                            </li>)
+                                : ""
+                        }
 
                     </ul>
                 </div>
@@ -56,18 +59,22 @@ const NavBar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-play text-2xl font-bold ">
                     <Link to='/'><li><p>Home</p></li></Link>
-                    <li><p>Services</p></li>
-                    <li>
-                        <details>
-                            <summary>Dashboard</summary>
-                            <ul className="p-2 absolute top-full z-50 bg-opacity-80">
-                                <li><p>Add Service</p></li>
-                                <li><p>Manage Services</p></li>
-                                <li><p>Booked Services</p></li>
-                                <li><p>Service-To-Do</p></li>
-                            </ul>
-                        </details>
-                    </li>
+                    <Link to='/all-services'><li><p>Services</p></li></Link>
+                    {
+                        user ? (<li>
+                            <details>
+                                <summary>Dashboard</summary>
+                                <ul className="p-2 absolute top-full z-50 bg-opacity-80">
+                                    <Link to='/add-service'><li><p>Add Service</p></li></Link>
+                                    <li><p>Manage Services</p></li>
+                                    <li><p>Booked Services</p></li>
+                                    <li><p>Service-To-Do</p></li>
+                                </ul>
+                            </details>
+                        </li>)
+                            :
+                            ""
+                    }
 
                 </ul>
             </div>
