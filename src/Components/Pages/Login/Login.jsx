@@ -50,11 +50,11 @@ const Login = () => {
 
 
     return (
-        <div className='flex justify-center items-center min-h-[calc(100vh-306px)] my-12 relative'>
+        <div className='flex md:flex-row flex-col mx-10 justify-center items-center min-h-[calc(100vh-306px)] my-12 relative'>
             <Helmet>
                 <title>Login || Elysium</title>
             </Helmet>
-            <p className='mt-3 text-5xl font-press  text-center text-[#FFD700] py-10 '>
+            <p className='mt-3 text-3xl md:text-5xl font-press  text-center text-[#FFD700] py-10 '>
                 Welcome back!
             </p>
             <div className='w-full max-w-sm mx-auto bg-none overflow-hidden rounded-lg shadow-lg lg:max-w-xl '>

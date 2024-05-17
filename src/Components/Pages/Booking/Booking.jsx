@@ -55,7 +55,7 @@ const Booking = () => {
             <Helmet>
                 <title>Booking Service || Elysium</title>
             </Helmet>
-            <p className="font-press text-center text-5xl my-10">Book Now</p>
+            <p className="font-press text-center text-3xl md:text-6xl my-10">Book Now</p>
             <section className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-transparent">
                 <form onSubmit={handleFormSubmission}>
                     <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2 md:grid-cols-3">
