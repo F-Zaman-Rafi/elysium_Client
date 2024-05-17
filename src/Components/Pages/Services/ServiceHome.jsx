@@ -17,14 +17,13 @@ const ServiceHome = () => {
     console.log(services)
 
     return (
-        <div className="mt-40">
+        <div className="md:mt-40">
 
-            <div className=" space-y-16">
+            <div className=" space-y-16 mx-5 md:mx-auto">
                 {
                     services.map(service => <ServiceCard key={service._id} service={service}></ServiceCard>)
                 }
             </div>
-
         </div>
     );
 };

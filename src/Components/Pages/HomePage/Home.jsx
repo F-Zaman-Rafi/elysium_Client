@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div className="text-whitel">
             <Carousel></Carousel>
-            <p className="text-6xl text-center font-press my-40">Services</p>
+            <p className="md:text-6xl text-xl text-center font-press my-20 md:my-40">Popular Services</p>
             <ServiceHome></ServiceHome>
             <div className='max-w-2xl mx-auto'>
                 <Link to='/all-services'><p className='btn w-full my-5 bg-[#FFD700] text-black hover:bg-transparent hover:text-[#FFD700]'>All Services</p></Link>

@@ -16,6 +16,9 @@ import Booking from './Components/Pages/Booking/Booking';
 import AllService from './Components/Pages/AllService/AllService';
 import PrivateRoute from './Components/Routes/PrivateRoute';
 import AddService from './Components/Pages/AddService/AddService';
+import ManageServices from './Components/Pages/ManageServices/ManageServices';
+import UpdateService from './Components/Pages/UpdateService/UpdateService';
+import BookedPages from './Components/Pages/BookedPages/BookedPages';
 
 const router = createBrowserRouter([
   {
@@ -53,7 +56,21 @@ const router = createBrowserRouter([
       {
         path: '/add-service',
         element: <PrivateRoute><AddService></AddService></PrivateRoute>
-      }
+      },
+      {
+        path: '/manage-service',
+        element: <PrivateRoute><ManageServices></ManageServices></PrivateRoute>
+      },
+      {
+        path: '/update-service/:id',
+        element: <PrivateRoute><UpdateService></UpdateService></PrivateRoute>,
+        loader: ({ params }) => fetch(`${import.meta.env.VITE_API_URL}/service/${params.id}`)
+      },
+      {
+        path: '/booked-services',
+        element: <PrivateRoute><BookedPages></BookedPages></PrivateRoute>
+      },
+
     ]
   },
 ]);

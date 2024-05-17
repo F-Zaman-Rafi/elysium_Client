@@ -20,16 +20,6 @@ const AddService = () => {
         const addServiceData = { serviceName, serviceImage, providerEmail, providerName, servicePrice, serviceArea, description, providerImage }
         console.table(addServiceData)
 
-        // "_id": "abcdef123456",
-        // "serviceName": "Game Level Design Consultation",
-        // "serviceImage": "https://example.com/game_level_design.jpg",
-        // "description": "Receive expert guidance on designing game levels.",
-        // "providerImage": "https://example.com/game_designer.jpg",
-        // "providerName": "Alice Johnson",
-        // "providerEmail": "alice.johnson@example.com",
-        // "serviceArea": "Online",
-        // "servicePrice": "$80"
-
 
         try {
             const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/services`, addServiceData)
@@ -50,21 +40,21 @@ const AddService = () => {
 
                         <div>
                             <label className="text-gray-700 dark:text-gray-200" >Service Image URL</label>
-                            <input name="serviceImage" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                            <input name="serviceImage" required type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
 
                         <div>
                             <label className="text-gray-700 dark:text-gray-200" >Service Name</label>
-                            <input name="serviceName" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                            <input name="serviceName" required type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
 
                         <div>
                             <label className="text-gray-700 dark:text-gray-200" >Price</label>
-                            <input name="servicePrice" type="number" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                            <input name="servicePrice" required type="number" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
                         <div>
                             <label className="text-gray-700 dark:text-gray-200" >Service Area</label>
-                            <select name="serviceArea" type="text" className="block select w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                            <select name="serviceArea" required type="text" className="block select w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
                                 <option disabled selected>Select Your Service Area</option>
                                 <option>Online</option>
                                 <option>Local</option>
@@ -74,12 +64,12 @@ const AddService = () => {
 
                         <div>
                             <label className="text-gray-700 dark:text-gray-200" >description</label>
-                            <input name="description" type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                            <input name="description" required type="text" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
                         </div>
                     </div>
 
-                    <div className="flex justify-end mt-6">
-                        <button className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Save</button>
+                    <div className="flex justify-end mt-5">
+                        <button className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform w-full bg-transparent border-violet-700 border-2 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Add</button>
                     </div>
                 </form>
             </section>
