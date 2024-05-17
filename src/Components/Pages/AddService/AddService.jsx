@@ -30,7 +30,7 @@ const AddService = () => {
         }
     }
 
-
+    <title>Add Service</title>
     return (
         <div>
             <p className="font-press text-center text-5xl my-10">Add Service</p>

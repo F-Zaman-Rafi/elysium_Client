@@ -81,7 +81,7 @@ const NavBar = () => {
                         user ? (<li>
                             <details>
                                 <summary>Dashboard</summary>
-                                <ul className="p-2 absolute top-full z-50 bg-opacity-80">
+                                <ul className="p-2 absolute top-full z-20 bg-opacity-80">
                                     <Link to='/add-service'><li><p>Add Service</p></li></Link>
                                     <Link to='/manage-service'><li><p>Manage Services</p></li></Link>
                                     <Link to='/booked-services'> <li><p>Booked Services</p></li></Link>
