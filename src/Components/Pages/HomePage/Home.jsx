@@ -25,7 +25,9 @@ const Home = () => {
             <div className=" mt-32">
                 <Testimonials></Testimonials>
             </div>
-
+            <div>
+                <TrustedConsumers></TrustedConsumers>
+            </div>
         </div>
     );
 };
