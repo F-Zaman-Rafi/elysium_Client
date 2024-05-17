@@ -1,9 +1,12 @@
 import axios from "axios";
 import useAuth from "../../Providers/useAuth";
 import { Helmet } from "react-helmet";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 const AddService = () => {
     const { user } = useAuth()
     const { displayName, email, photoURL } = user
+    const navigate = useNavigate()
 
 
     const handleAddJobs = async event => {
@@ -24,6 +27,8 @@ const AddService = () => {
         try {
             const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/services`, addServiceData)
             console.log(data)
+            navigate('/manage-service')
+            toast.success('Service Posted Successfully')
         }
         catch (error) {
             console.log(error)
@@ -32,7 +37,7 @@ const AddService = () => {
 
 
     return (
-        <div>
+        <div className="font-play">
             <Helmet>
                 <title>Add Service || Elysium</title>
             </Helmet>

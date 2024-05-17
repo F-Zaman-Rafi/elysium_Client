@@ -4,7 +4,7 @@ import Background from "../BackGround/Background";
 import Footer from "../Footer/Footer";
 const Root = () => {
     return (
-        <div className=" text-white ">
+        <div className=" text-white font-play">
             <div className="absolute top-0 left-0 w-full h-full"><Background></Background></div>
             <div className="relative container mx-auto">
                 <NavBar ></NavBar>

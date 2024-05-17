@@ -2,11 +2,12 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import useAuth from "../../Providers/useAuth";
 import { useState } from "react";
 import axios from "axios";
 import { Helmet } from "react-helmet";
+import toast from "react-hot-toast";
 
 const Booking = () => {
 
@@ -14,7 +15,7 @@ const Booking = () => {
     const service = useLoaderData();
     const { displayName, email } = user;
     const { _id, serviceName, serviceImage, providerName, providerEmail, servicePrice } = service;
-
+    const navigate = useNavigate()
     const [startDate, setStartDate] = useState(new Date());
 
 
@@ -39,6 +40,8 @@ const Booking = () => {
         try {
             const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/booking`, bookingData)
             console.log(data)
+            navigate('/booked-services')
+            toast.success('Service Booked Successfully')
         }
         catch (error) {
             console.log(error)
@@ -101,7 +104,7 @@ const Booking = () => {
                     </div>
 
                     <div className="flex justify-end mt-6">
-                        <button className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Save</button>
+                        <button className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Book</button>
                     </div>
                 </form>
             </section>
